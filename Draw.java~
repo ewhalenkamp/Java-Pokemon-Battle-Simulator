@@ -1,0 +1,48 @@
+import java.awt.Font;
+import java.util.*;
+
+public class Draw {
+    
+    private int height;
+    private int width;
+    
+      /***********************************************************************
+      * Method:   Draw Constructor                                           *
+      * Purpose:  Constructor for the Draw object                            *
+      * Parameters:                                                          *
+      *     height - height of the canvas                                    *
+      *     width - width of the canvas                                      *
+      * Return Value:  none                                                  *
+      ***********************************************************************/
+    
+    public Draw(int width, int height) {
+        this.height = height;
+        this.width = width;
+        StdDraw.enableDoubleBuffering();
+    }
+    
+    public void initCanvas() {
+        StdDraw.setCanvasSize(this.width, this.height);
+        StdDraw.setXscale(0, width);
+        StdDraw.setYscale(0, height);
+    }
+    
+    public int waitForInput(ArrayList<Button> buttonList) {
+        while (true) {
+            for (Button button : buttonList) {
+                if(button.isPressed()) {
+                    System.out.println(buttonList.indexOf(button));
+                    return buttonList.indexOf(button);
+                }
+            }
+        }
+    }
+    
+    public void drawField(ArrayList<ActivePokemon> team1List, ArrayList<ActivePokemon> team2List) {
+        StdDraw.setPenColor(StdDraw.BLACK);
+        StdDraw.line(-10,310,width+10,310);
+    }
+    
+    
+    
+}
