@@ -50,7 +50,7 @@ public class DataClass {
     
     public void initBasePokemon() 
         throws IOException {
-        File file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/Pokestats.txt"); 
+        File file = new File("../DATA/Pokestats.txt"); 
         Scanner sc = new Scanner(file); 
         
         ArrayList<BasePokemon> pokeList = new ArrayList<BasePokemon>();
@@ -111,7 +111,7 @@ public class DataClass {
     public void initBasePokemonData() 
         throws IOException
     {
-        File file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/PokemonData.txt"); 
+        File file = new File("../DATA/PokemonData.txt"); 
         Scanner sc = new Scanner(file); 
         this.datacollection = new PokemonCollection();
         
@@ -319,7 +319,7 @@ public class DataClass {
     public void initBaseMove() 
         throws IOException
     {
-        File file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/Moves.txt"); 
+        File file = new File("../DATA/Moves.txt"); 
         Scanner sc = new Scanner(file); 
         ArrayList<BaseMove> moveList = new ArrayList<BaseMove>();
         for (int i=0;i<728;i++) {
@@ -348,7 +348,7 @@ public class DataClass {
     public void initBaseAbility() 
         throws IOException
     {
-        File file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/Abilities.txt"); 
+        File file = new File("../DATA/Abilities.txt"); 
         Scanner sc = new Scanner(file); 
         Scanner sc2 = new Scanner(file);
         ArrayList<BaseAbility> abilityList = new ArrayList<BaseAbility>();
@@ -374,7 +374,7 @@ public class DataClass {
     public void initDexDescriptions()
         throws IOException
     {
-        File file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/DexDescriptions.txt");
+        File file = new File("../DATA/DexDescriptions.txt");
         ArrayList<String> dexList = new ArrayList<String>();
         BufferedReader br = new BufferedReader(new FileReader(file));
         for (int i=0;i<721;i++) {
@@ -405,10 +405,10 @@ public class DataClass {
         //file reader
         File file = new File("");
         if (team == 1) {
-            file = new File("D:/Spring 2020/CS 200/Pokemon Game/Teambuilder/TeamOne.txt"); 
+            file = new File("../Teambuilder/TeamOne.txt"); 
         }
         else if (team == 2)
-            file = new File("D:/Spring 2020/CS 200/Pokemon Game/Teambuilder/TeamTwo.txt"); 
+            file = new File("../Teambuilder/TeamTwo.txt"); 
         Scanner sc = new Scanner(file); 
         Scanner sc2 = new Scanner(file);
         boolean firstrun = true;
@@ -672,7 +672,7 @@ public class DataClass {
     {
         //creating a list of Possible Abilities within each individual BasePokemon object
         
-        File file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/PossibleAbilities.txt"); 
+        File file = new File("../DATA/PossibleAbilities.txt"); 
         Scanner sc = new Scanner(file); 
         ArrayList<BasePokemon> dataList = new ArrayList<BasePokemon>();
         ArrayList<Integer> dataidList = new ArrayList<Integer>();
@@ -693,7 +693,7 @@ public class DataClass {
         
         //creating a list of Possible Moves within each individual BasePokemon object
         
-        file = new File("D:/Spring 2020/CS 200/Pokemon Game/DATA/PossibleMoves.txt"); 
+        file = new File("../DATA/PossibleMoves.txt"); 
         sc = new Scanner(file); 
         
         int moveid;
